@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel=stylesheet type="text/css" href="../../public/css/welcome.css">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="top">
+        <ul>
+            <li ><div class="topbox">Welcome</div><div class="topbox-border"></div></li>
+            <li ><div class="topbox">Material</div><div class="topbox-border"></div></li>
+            <li ><div class="topbox">Procution</div><div class="topbox-border"></div></li>
+            <li><div id="user">user</div></li>
+        </ul>
+    </div>
+     <div class="search">
+            <form class="form-inline">
+                    <div class="form-group">
+                      <label for="exampleInputName2">Name</label>
+                      <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail2">ID</label>
+                      <input type="text" class="form-control" id="ID" placeholder="ID">
+                    </div>
+                    <button type="submit" class="btn btn-default" onclick=search()>submit</button>
+                  </form>
+     </div>
+    <div class="content"> 
+            
+                     
+            <table class="table table-hover">
+                    <tr>
+                            <th>班级</th>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>加分内容</th>
+                            <th></th>
+                    </tr>
+
+                    <tr>
+                            <th>班级</th>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>加分内容</th>
+                            <th id="add">+</th>
+                    </tr>
+
+
+            </table>
+
+    </div>
+     
+    
+    
+</body>
+<script>
+    //top 动画
+    var suffix = window.location.search;
+	var username = suffix.substring(suffix.lastIndexOf('=')+1);
+    // window.location.href = 'rental.html?email='+email;
+    console.log(username)
+    var user=document.getElementById("user")
+    user.innerText="Hello! "+ username
+
+
+
+$(document).ready(function()
+  {
+  $(".topbox").hover(function(){
+    $(this).next().animate({width:"100%",left:'0',
+      right:'0'});
+  });
+
+$(".topbox").mouseleave(function(){
+    $(".topbox-border").stop().animate({width:"0",left:"50%"
+     });
+
+ });
+  
+});
+
+//
+function search(){
+    var id = document.getElementById("ID").value;
+    var name = document.getElementById("exampleInputName2").value;
+    console.log(id);
+    console.log(name);
+
+}
+
+
+</script>
+</html>

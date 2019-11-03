@@ -1,0 +1,61 @@
+body{
+    background: url("../material/background/leaves.png") repeat center 0
+}
+
+.top{
+
+    height:70px;
+    width:100%;
+    background-color:rgb(185,214,219);
+}
+.top-title{
+    height:60px;
+}
+.topbox{
+    height:40px;
+    /* float:left; */
+    margin-top:17px;
+}
+.topbox-line{
+    width:100%;
+    height:1px;
+}
+.topbox-border{
+    height:3px;
+    font-size:5px;
+    background-color:black;
+    /* float:left; */
+    /* margin-top: -10px; */
+    width:0px;
+    position:relative;
+    float:left;
+    top:12px;
+    left:50%;
+    
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    width:130px;
+    height:70px;
+    text-align:center;
+    /* padding-top:15px; */
+    font-size:25px;
+    margin-left:50px;
+    cursor: pointer;
+}
+
+#user{
+    font-size: 17px;
+    position:relative;
+    left:630px;
+}
+
+.search{
+    width:100%;
+    height:60px;
+    margin-top:15px;
+    margin-left:30%;
+    
+}

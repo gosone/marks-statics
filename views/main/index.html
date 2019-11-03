@@ -1,0 +1,88 @@
+<!--首页-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel=stylesheet type="text/css" href="../../public/css/index.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <script src="/public/js/index.js">
+    </script> -->
+</head>
+<body>
+   <img class="loginpicture" src="../../public/material/background/login.png">
+   <div class="rightbox" id="loginbox">
+       <div  class="title"><span  id="login_title">登录</span></div>
+
+       <div class="line"><span class="colDark">账号：</span>
+       <input type="text" class="login-text" id="loginusername">
+       </div>
+       
+
+       <div class="line"><span class="colDark">密码：</span>
+       <input type="text" class="login-text" id="loginpassword">
+       </div>
+       <!--登录结果的结果信息-->
+       <div class="backinformation"><span id="loginback"></span></div>
+
+       <div class="login-line"><span class="colDark"></span>
+       <button class="btn btn-primary btn-lg" id="login-botton" onclick="loginuse()">登录</button>
+       </div>
+      
+   </div>
+
+   
+
+</body>
+</html>
+<script>
+
+    var loginbox=document.getElementById("loginbox");
+    var login=document.getElementById("login");
+    
+
+    //登录
+    function loginuse(){
+        //alert("login");
+        var username = document.getElementById("loginusername").value;
+        var password = document.getElementById("loginpassword").value;
+
+        $.post("/api/user/login",
+        { username:username,
+          password:password},
+        function(data){ 
+            console.log(data);
+          var loginback= document.getElementById("loginback");
+          if(data===0){
+              loginback.innerText="用户不存在或密码错误";
+          }
+          if(data===1){
+              //农场主
+              window.location.href='welcome?username='+username;
+          }
+          if(data==2){
+              //技术人员
+              window.location.href='welcome?username='+username;
+          }
+          if(data===3){
+              //技术人员2
+              window.location.href='welcome?username='+username;
+          }
+          if(data==4){
+              //市场人员
+              window.location.href='welcome?username='+username;
+          }
+          if(data==5){
+              //顾客
+              window.location.href='welcome?username='+username;
+          }
+
+        },"json")
+
+
+    }
+
+</script>

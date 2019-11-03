@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    
+    .top{
+        margin-top:5px;
+        height:40px;
+        color:rgb(80, 80, 80);
+        font-size:20px;
+    }
+    
+   
+    </style>
+</head>
+<body>
+    
+    <div class="top">
+      <span>用户管理</span>
+    </div>
+
+    <table class="table table-striped">
+       <tr>
+           <th>用户名</th>
+           <th>密码</th>
+           <th>是否是管理员</th>
+           <th></th>
+       </tr>
+
+        {% for user in users %}
+
+       <tr>
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.isadmin}}</td>
+            <button>+</button>
+        </tr>
+  
+        {% endfor %}
+
+    </table>
+
+    </div>
+</body>
+</html>

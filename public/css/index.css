@@ -1,0 +1,66 @@
+
+.rightbox{
+    position:relative;
+    top:110px;
+    right:90px;
+    height:300px;
+    width:300px;
+    display: block;
+    border:solid 1px rgb(130,130,130);
+    border-radius:10px;
+    float:right;
+}
+.title{
+  height:45px;
+  width:280px;
+  text-align:center;
+  font-size:22px;
+  border-bottom:solid 2px rgb(51,122,183);
+  position:relative;
+  left:10px;
+  padding-top:5px;
+}
+.line{
+    margin-top:25px;
+    height:30px;
+    font-size:15px;
+    /*
+    border:solid 1px black;
+    */
+    position:relative;
+    left:10px;
+}
+.loginpicture{
+    height:200px;
+    position:relative;
+    top:130px;
+    left:80px;
+
+}
+.login-text{
+    font-size:18px;
+    /*
+    border:solid 1px black;
+    */
+}
+.login-line{
+    margin-top:10px;
+    text-align:center;
+    /*
+    border:solid 1px black;
+    */
+}
+#login-botton{
+    margin-top:30px;
+    height:40px;
+    width:175px;
+}
+#registerbox{
+    display: none;
+}
+.backinformation{
+    height:15px;
+    color:red;
+    text-align:center;
+    font-size:10px;
+}
